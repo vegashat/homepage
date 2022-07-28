@@ -1,0 +1,45 @@
+img
+{
+    height: auto;
+    width: auto;
+    max-height: 120px;
+    max-width:  120px;
+}
+
+.title
+{
+    margin: 10px;
+    font-size: 1.1em;
+}
+
+.mat-list-item {
+    height: 30px !important;
+}
+.mat-list-item-content
+{
+    padding: 2px !important;
+}
+
+
+.reader-card {
+    margin: 5px;
+    padding: 5px;
+    /*width: 28vw*/
+ }
+
+  .refresh 
+  {
+        font-size:  .5em;
+        position: absolute;
+        right: 10px;
+        top: 25px;
+  }
+  .refresh *
+  {
+      vertical-align: middle;
+  }
+  .refresh-text
+  {
+      padding-bottom: 15px;
+      border-bottom: 1px
+  }
