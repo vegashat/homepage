@@ -2,10 +2,10 @@ FROM node:14-alpine as angular-build
 WORKDIR /usr/src/app/
 RUN chmod 777 /usr/src/app
 COPY package.json package.json
-RUN npm audit fix
 RUN npm install --dev --silent
 COPY . .
 RUN npm install -g @angular/cli
+RUN npm i @angular/material
 RUN ng build --prod --verbose=true
 
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
