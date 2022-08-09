@@ -2,6 +2,7 @@ FROM node:13-alpine as angular-build
 WORKDIR /usr/src/app/
 RUN chmod 777 /usr/src/app
 COPY package.json package.json
+RUN npm audit fix
 RUN npm install --dev --silent
 COPY . .
 RUN npm install -g @angular/cli
