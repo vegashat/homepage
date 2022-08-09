@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: vegashat/homeboard:latest
+    image: vegashat/homepage:latest
     restart: always
     ports:
       - "4002:80"
