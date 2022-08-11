@@ -1,6 +1,6 @@
 <div>
-  <div class='md-padding' fxLayout="row wrap" fxLayout.xs="column" fxFlexFill>
-    <div fxFlex.lg="33" fxflex.xs="95" fxFlex.sm="45" fxFlex.md="45" *ngFor='let feed of feeds' class='feed-container'>
+  <div class='md-padding d-flex flex-row flex-wrap justify-content-between'>
+    <div *ngFor='let feed of feeds' class="feed-container flex-fill">
       <app-reader [title]='feed.title' [siteUrl]='feed.siteUrl' [feedUrl]='feed.feedUrl'></app-reader>
     </div>
   </div>

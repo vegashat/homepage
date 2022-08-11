@@ -1,10 +1,12 @@
 <mat-card class="reader-card">
   <mat-card-title class='card-title'>
-    <span><a [href]='siteUrl' target="_blank">{{title}}</a></span>
-    <span class="example-fill-remaining-space"></span>
-    <div class='refresh'>
-      <span class='refresh-text'>Refreshes in {{remainingMin}} min.</span>
-      <mat-icon class='clickable' (click)='getEntries()'>refresh</mat-icon>
+    <div class="d-flex align-items-center">
+      <span><a [href]='siteUrl' target="_blank">{{title}}</a></span>
+      <span class="example-fill-remaining-space"></span>
+      <div class='refresh'>
+        <span class='refresh-text'>Refreshes in {{remainingMin}} min.</span>
+        <mat-icon class='clickable' (click)='getEntries()'>refresh</mat-icon>
+      </div>
     </div>
   </mat-card-title>
   <mat-divider></mat-divider>
@@ -12,8 +14,8 @@
     <div class='entry' *ngIf='entries'>
       <mat-list dense>
         <mat-list-item *ngFor='let entry of entries'>
-          <mat-icon class="clickable" 
-          [mdePopoverTriggerFor]="entryDescriptionPopup" mdePopoverTriggerOn="click" matListIcon>all_out</mat-icon>
+          <mat-icon class="clickable" [mdePopoverTriggerFor]="entryDescriptionPopup" mdePopoverTriggerOn="click"
+            matListIcon>all_out</mat-icon>
           <!--<a [href]='entry.link'>{{entry.title}}</a>-->
           <a [href]='entry.link' target="_blank" class='title' [title]='entry.title'>{{entry.formattedTitle}}</a>
           <mde-popover #entryDescriptionPopup="mdePopover" [mdePopoverOverlapTrigger]="false">
