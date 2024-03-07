@@ -1,4 +1,4 @@
-FROM node:14-alpine as angular-build
+FROM node:18-alpine as angular-build
 WORKDIR /usr/src/app/
 RUN chmod 777 /usr/src/app
 COPY package.json package.json
