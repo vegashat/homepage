@@ -2,6 +2,7 @@ FROM node:latest as angular-build
 WORKDIR /usr/src/app/
 RUN chmod 777 /usr/src/app
 COPY package.json package.json
+RUN npm install -g npm@10.5.0
 RUN npm install --dev --silent
 COPY . .
 RUN npm install -g @angular/cli
